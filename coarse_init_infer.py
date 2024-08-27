@@ -26,12 +26,12 @@ def get_args_parser():
     parser.add_argument("--schedule", type=str, default='linear')
     parser.add_argument("--lr", type=float, default=0.01)
     parser.add_argument("--niter", type=int, default=300)
-    parser.add_argument("--focal_avg", action="store_true")
-    # parser.add_argument("--focal_avg", type=bool, default=True)
+    # parser.add_argument("--focal_avg", action="store_true")
+    parser.add_argument("--focal_avg", type=bool, default=True)
 
     parser.add_argument("--llffhold", type=int, default=2)
-    parser.add_argument("--n_views", type=int, default=12)
-    parser.add_argument("--img_base_path", type=str, default="/home/workspace/datasets/instantsplat/Tanks/Barn/24_views")
+    parser.add_argument("--n_views", type=int, default=3)
+    parser.add_argument("--img_base_path", type=str, default="/home/farsee/ALL_CODE/3DGS/InstantSplat-study/data/sora/santorini/3_views")
 
     return parser
 

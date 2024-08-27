@@ -46,7 +46,7 @@ class SceneInfo(NamedTuple):
     test_poses: list
 
 def getNerfppNorm(cam_info):
-    def get_center_and_diag(cam_centers):
+    def get_center_and_diag(cam_centers): # 计算整个场景的中心点 center 和对角线 diagonal。
         cam_centers = np.hstack(cam_centers)
         avg_cam_center = np.mean(cam_centers, axis=1, keepdims=True)
         center = avg_cam_center
@@ -90,7 +90,7 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, eval):
 
         height = intr.height
         width = intr.width            
-        R = np.transpose(qvec2rotmat(extr.qvec))
+        R = np.transpose(qvec2rotmat(extr.qvec)) 
         T = np.array(extr.tvec)
         pose =  np.vstack((np.hstack((R, T.reshape(3,-1))),np.array([[0, 0, 0, 1]])))
         poses.append(pose)

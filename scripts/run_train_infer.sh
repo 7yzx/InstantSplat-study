@@ -1,6 +1,6 @@
 #! /bin/bash
 
-GPU_ID=6
+GPU_ID=0
 DATA_ROOT_DIR="/ssd2/zhiwen/projects/InstantSplat/data"
 DATASETS=(
     # TT
